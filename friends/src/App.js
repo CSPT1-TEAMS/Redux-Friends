@@ -27,12 +27,6 @@ const mapStateToProps = state => {
   return {
     fetchingFriends: state.fetchingFriends,
     friendsFetched: state.friendsFetched,
-    // friendsSaved: state.friendsSaved,
-    // savingFriends: state.savingFriends,
-    // updatingFriend: state.updatingFriend,
-    // friendUpdated: state.friendUpdated,
-    // deletingFriend: state.deletingFriend,
-    friendDeleted: state.friendDeleted,
     friends: state.friends,
     error: state.error
   }
