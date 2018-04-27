@@ -3,9 +3,7 @@ import axios from 'axios';
 export const FETCHING = 'FETCHING';
 export const FETCHED = 'FETCHED';
 export const ERROR = 'ERROR';
-export const ADDED = 'ADDED';
-export const DELETED = 'DELETED';
-export const UPDATED = 'UPDATED';
+export const SUCCESS = 'SUCCESS'
 
 export const getFriends = () => {
   return dispatch => {
@@ -22,10 +20,9 @@ export const getFriends = () => {
 
 export const addFriend = (newFriend) => {
   return dispatch => {
-    // dispatchEvent({type: ADDED})
       axios.post('http://localhost:5000/api/friends', newFriend)
       .then(response => {
-        dispatch({type: ADDED, friends: response.data})
+        dispatch({type: SUCCESS, friends: response.data})
       })
       .catch(error => {
         dispatch({type: ERROR, error: error})
@@ -37,7 +34,7 @@ export const deleteFriend = (id) => {
   return dispatch => {
       axios.delete(`http://localhost:5000/api/friends/${id}`)
       .then(response => {
-        dispatch({type: DELETED, friends: response.data})
+        dispatch({type: SUCCESS, friends: response.data})
       })
       .catch(error => {
         dispatch({type: ERROR, error: error})
@@ -49,7 +46,7 @@ export const updateFriend = (friend) => {
   return dispatch => {
       axios.put(`http://localhost:5000/api/friends/${friend.id}`, friend)
       .then(response => {
-        dispatch({type: UPDATED, friends: response.data})
+        dispatch({type: SUCCESS, friends: response.data})
       })
       .catch(error => {
         dispatch({type: ERROR, error: error})
