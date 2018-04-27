@@ -45,9 +45,9 @@ export const deleteFriend = (id) => {
   }
 }
 
-export const updateFriend = (id, friendInfo) => {
+export const updateFriend = (friend) => {
   return dispatch => {
-      axios.put(`http://localhost:5000/api/friends/${id}`, friendInfo)
+      axios.put(`http://localhost:5000/api/friends/${friend.id}`, friend)
       .then(response => {
         dispatch({type: UPDATED, friends: response.data})
       })

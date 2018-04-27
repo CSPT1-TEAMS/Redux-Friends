@@ -15,8 +15,7 @@ class UpdateFriendForm extends Component {
     }
 
     handleUpdate = () => {
-        const { name, age, email, id } = this.state;
-        this.props.updateFriend(id, {name, age, email});
+        this.props.updateFriend(this.state);
         this.setState({
             name: '',
             age: '',
