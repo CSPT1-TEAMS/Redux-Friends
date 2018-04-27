@@ -10,16 +10,14 @@ const Friends = props => {
         {props.friends.map(friend => {
           return (
             <div className='friendCard'>
-              
-                  <Card>
-                    <CardBody>
-                      <CardTitle>{friend.id}. {friend.name}</CardTitle>
-                      <CardSubtitle>{friend.age}</CardSubtitle>
-                      <CardText>{friend.email}</CardText>
-                      <Button onClick={() => props.deleteFriend(friend.id)} >Delete Friend</Button>
-                    </CardBody>
-                  </Card>
-                
+              <Card>
+                <CardBody>
+                  <CardTitle>{friend.id}. {friend.name}</CardTitle>
+                  <CardSubtitle>{friend.age}</CardSubtitle>
+                  <CardText>{friend.email}</CardText>
+                  <Button onClick={() => props.deleteFriend(friend.id)} >Delete Friend</Button>
+                </CardBody>
+              </Card>
             </div>
           )
         })}           
