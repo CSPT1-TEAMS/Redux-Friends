@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { addFriend } from '../Actions';
 import { connect } from 'react-redux';
-import { Button, Form, FormGroup, Label, Input, FormText } from 'reactstrap';
+import { Button, Form, FormGroup, Label, Input } from 'reactstrap';
 
 class CreateFriendForm extends Component {
     state = {
