@@ -40,8 +40,10 @@ let friends = [
 ];
 
 app.use(bodyParser.json());
-
-app.use(cors());
+const corsOptions = {
+  origin: '*'
+}
+app.use(cors(corsOptions));
 
 app.get('/api/friends', (req, res) => {
   setTimeout(() => {
