@@ -26,3 +26,11 @@
   from { transform: rotate(0deg); }
   to { transform: rotate(360deg); }
 }
+
+.friend {
+  width: 50%;
+  padding: 2px;
+  box-shadow: 0 2px 4px grey;
+  margin: 10px auto;
+  list-style: none;
+}
