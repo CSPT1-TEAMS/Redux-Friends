@@ -25,7 +25,7 @@ class App extends Component {
         {this.props.error !== "" ? <h2>{this.props.error}</h2> : null}
         {this.props.updating ? <UpdateFriend /> : null}
         <ul>
-          {this.props.friends.maps(friend => {
+          {this.props.friends.map(friend => {
             return <Friend key={friend.id} friend={friend} />;
           })}
         </ul>
