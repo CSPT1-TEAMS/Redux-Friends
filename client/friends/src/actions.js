@@ -45,7 +45,7 @@ export const updateFriend = friend => {
   return dispatch => {
     dispatch({type: PENDING})
     axios.put(`http://localhost:5000/api/friends/${friend.id}`, friend)
-      .then(response => dispatch({ type: SUCCES, friends: response.data }))
+      .then(response => dispatch({ type: SUCCESS, friends: response.data }))
       .catch(err => dispatch({
         type: ERROR, error: "ERROR UPDATING FRIEND"
       }))
